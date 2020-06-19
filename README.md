@@ -1,6 +1,6 @@
 Pensez à changer votre BDD dans le fihier **models/characters.js**
 
-Puis, dans un terminal à la racine du projet : 
+Puis, dans un terminal à la racine du projet, on install tous les modules (comme un composer install) : 
 
 >npm i
 
