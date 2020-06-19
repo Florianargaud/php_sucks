@@ -1,0 +1,47 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <%- include('header'); -%>
+
+    <br />
+    <% if (data.length > 0) {%>
+    <h2>AllUser</h2>
+    <table
+      border="1"
+      style="
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+        font: 600;
+      "
+    >
+      <thead>
+        <tr>
+          <th>
+            Name
+          </th>
+          <th>
+            Description
+          </th>
+          <th>
+            picture
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for(var i=0; i < data.length; i++) {%>
+        <tr>
+          <td><%= data[i].name%></td>
+          <td><%= data[i].description%></td>
+          <td><%= data[i].picture%></td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+    <% } %>
+  </body>
+</html>
