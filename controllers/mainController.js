@@ -1,5 +1,6 @@
 var charModel = require("../models/characters");
 
+// On récupére nos données avec le controller
 var usersController = {
   userHome(req, res) {
     charModel.getUser((data, err) => {
@@ -9,8 +10,9 @@ var usersController = {
           console.log(err);
         } else if (data) {
           console.log("DATAS OK");
+          // Si pas d'erreurs, on sert notre fichier
+          // home.ejs avec les données
           res.render("home", { data: data });
-          // res.send("Holle")
         } else {
           res.render("home", { data: {} });
         }
